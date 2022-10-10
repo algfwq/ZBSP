@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>PF屏幕共享</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 1000px;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<img src="{{ url_for('video') }}" id="img">
+</body>
+<script>
+    //视频大小初始化
+    let img = document.getElementById('img');
+    img.style.width = document.body.offsetWidth + 'px';
+    //跟随浏览器改变大小
+    window.onresize = function () {
+        img.style.width = document.body.offsetWidth + 'px';
+    }
+</script>
+</html>
