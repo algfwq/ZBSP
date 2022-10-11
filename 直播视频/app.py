@@ -2,7 +2,7 @@ import socket
 from io import BytesIO
 from  PIL import ImageGrab
 import pyautogui
-from Flask import Flask, render_template, Response
+from flask import Flask, render_template, Response
 
 app = Flask(__name__)
 
